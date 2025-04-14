@@ -33,17 +33,17 @@ export function CronForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-xl mx-auto space-y-4 mt-10">
       <div className="space-y-2">
         <label className="block font-medium">Nazwa</label>
-        <Input {...register("name")} />
+        <Input {...register("name" as const)} />
       </div>
 
       <div className="space-y-2">
         <label className="block font-medium">Komenda</label>
-        <Input {...register("command")} />
+        <Input {...register("command" as const)} />
       </div>
 
       <div className="space-y-2">
         <label className="block font-medium">Harmonogram</label>
-        <Input {...register("cron")} disabled />
+        <Input {...register("cron" as const)} disabled />
         <Button type="button" variant="outline" onClick={handleSetCron}>
           Ustaw harmonogram
         </Button>
@@ -52,13 +52,13 @@ export function CronForm() {
       <Button type="submit">Zapisz</Button>
 
       <CronPopup
-  open={isPopupOpen}
-  onClose={() => setIsPopupOpen(false)}
-  onConfirm={(cronString) => {
-    setValue("cron", cronString)
-    setIsPopupOpen(false)
-  }}
-/>
+        open={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+        onConfirm={(cronString) => {
+          setValue("cron", cronString)
+          setIsPopupOpen(false)
+        }}
+      />
     </form>
   )
 }
