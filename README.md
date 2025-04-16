@@ -18,3 +18,31 @@ Opis funkcjonalności:
 6. Zmiana wyboru dokonywane przy pomocy radioboxów nie usuwają wartości w polach formularza (powinny zostać zapamiętane).
 7. Każdy wybór powinien aktualizować podgląd w nagłówku.
 8. Button „Ustaw” powinien przenosić stworzony string do inputa „Harmonogram” w głównym formularzu i zamknąć popup.
+
+## Instalacja  💻 💻 
+
+1. **Klonowanie repozytorium:**
+
+   ```bash
+   git clone https://github.com/smootny/cron.git
+   ```
+
+2. **Nawigowanie do folderu z projektem:**
+
+   ```bash
+   cd cron-builder
+   ```
+
+3. **Instalacja npm:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the app:**
+
+  
+     ```bash
+     npm run dev
+     ```
+
